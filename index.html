@@ -8,6 +8,56 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <img alt="logo" src="Logo.svg">
+        <div class="header">
+            <div class="contact">
+                <div class="info">
+                    <i class="fa-regular fa-phone"></i>
+                    +46 (8) 121 470 50
+                </div>
+                <div class="info">
+                    <i class="fa-regular fa-envelope"></i>
+                    info@crito.com
+                </div>
+                <div id="location-social" class="info">
+                    <div class="location">
+                        <i class="fa-sharp fa-regular fa-location-dot"></i>
+                        Sveavägen 31, 111 34 STOCKHOLM
+                    </div>
+                    <div class="social">
+                       <a href="https://facebook.com"> <i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com"> <i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://instagram.com"> <i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://linkedin.com"> <i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+
+                </div>
+            </div>
+            <div id="nav" class="nav">
+                <nav>
+                    <a href="#" id="here">Home</a>
+                    <a href="#">Service</a>
+                    <a href="#">News</a>
+                    <a href="#">Contact</a>
+                </nav>
+                <a class="login-button" href="#">Login <i class="fa-solid fa-arrow-up-right"></i></a>
+            </div>
+            <button onclick="myFunction()" class="menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <script>
+        function myFunction() {
+            if (document.getElementById("nav").style.display != "block"){
+                document.getElementById("nav").style.display = "block";
+            }
+
+            else{
+                document.getElementById("nav").style.display = "none";
+            }
+        }
+        </script>
 </body>
 </html>
