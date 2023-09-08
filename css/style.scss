@@ -15,7 +15,6 @@ html, body{
 header{
     margin: auto;
 
-
     height: 120px;
     width: 1300px;
 
@@ -37,10 +36,8 @@ header{
         }
     }
     .header{
-
         position:relative;
         
-
         width: 100%;
 
         @media (max-width: 500px){
@@ -66,6 +63,7 @@ header{
             font-size: 15px;
 
             position: relative;
+
             &::after{
                 content: '';
 
@@ -112,7 +110,6 @@ header{
         }
         .nav{
             width: 100%;
-
             
             justify-content: space-between;
 
@@ -132,11 +129,7 @@ header{
                 left: 0;
 
                 height: 375px;
-
-                
             }
-
-            
 
             nav{
                 width: 306px;
@@ -145,14 +138,10 @@ header{
                 justify-content: space-between;
 
                 @media(max-width: 500px){
-
                     width: 100%;
 
                     display:block;
-                    
                 }
-
-
                 
                 a{
                     text-decoration: none;
@@ -179,8 +168,7 @@ header{
                         &:hover{
                             background-color: rgba(0, 0, 0, 0.089);
                         }
-
-                        
+  
                     }
 
                     &:hover::after{
@@ -188,7 +176,6 @@ header{
     
                         margin:auto;
                         
-    
                         position:absolute;
                         bottom: 13px;
                         right: 0;
@@ -203,7 +190,6 @@ header{
                             display:none;
                         }
 
-
                     }
 
                 }
@@ -213,7 +199,6 @@ header{
 
                     margin:auto;
                     
-
                     position:absolute;
                     bottom: 13px;
                     right: 0;
@@ -231,7 +216,6 @@ header{
                 }
             }
             .login-button{
-
                 width: 122px;
                 height: 48px;
 
@@ -251,9 +235,11 @@ header{
                 @media (max-width: 500px){
                     margin: auto;
                 }
+
                 i{
                     margin-left: 13px;
                 }
+                
                 &:hover{
                     background-color: #191919;
                     color: #F0EFE9;
