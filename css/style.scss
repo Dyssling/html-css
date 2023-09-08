@@ -12,6 +12,38 @@ html, body{
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.login-button{
+    width: 122px;
+    height: 48px;
+
+    border-radius: 30px;
+
+    margin-right: 9px;
+
+    text-decoration: none;
+    color: black;
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #F9D783;
+
+    @media (max-width: 500px){
+        margin: auto;
+        margin-top: 18px;
+    }
+
+    i{
+        margin-left: 13px;
+    }
+    
+    &:hover{
+        background-color: #191919;
+        color: #F0EFE9;
+    }
+}
+
 header{
     margin: auto;
 
@@ -33,6 +65,8 @@ header{
 
         @media (max-width: 500px){
             margin-left: 3vw;
+            
+            width: 270px;
         }
     }
     .header{
@@ -123,12 +157,14 @@ header{
             @media(max-width: 500px){
                 display:none;
                 
-                background-color: rgba(0, 0, 0, 0.089);
+                background-color:#f0efe9f6;
+
+                z-index: 999;
 
                 top: 120px;
                 left: 0;
 
-                height: 375px;
+                height: 410px;
             }
 
             nav{
@@ -165,8 +201,10 @@ header{
 
                         font-size: 1.1rem;
 
+                        // color:#F0EFE9;
+
                         &:hover{
-                            background-color: rgba(0, 0, 0, 0.089);
+                            background-color: rgba(0, 0, 0, 0.068);
                         }
   
                     }
@@ -215,36 +253,6 @@ header{
 
                 }
             }
-            .login-button{
-                width: 122px;
-                height: 48px;
-
-                border-radius: 30px;
-
-                margin-right: 9px;
-
-                text-decoration: none;
-                color: black;
-                
-                display:flex;
-                justify-content: center;
-                align-items: center;
-
-                background-color: #F9D783;
-
-                @media (max-width: 500px){
-                    margin: auto;
-                }
-
-                i{
-                    margin-left: 13px;
-                }
-                
-                &:hover{
-                    background-color: #191919;
-                    color: #F0EFE9;
-                }
-            }
             
         }
         .menu{
@@ -263,12 +271,120 @@ header{
             }
 
             &:hover{
-                background-color: rgba(0, 0, 0, 0.151);
+                background-color: rgba(0, 0, 0, 0.068);
                 cursor: pointer;
             }
 
             i{
                 font-size: 2.8rem;
+            }
+        }
+    }
+}
+
+section{
+    position:relative;
+
+    .element{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        pointer-events: none; //Detta för att man ska kunna klicka på knapparna när de egentligen ligger bakom denna bilden
+
+        @media (max-width: 500px){
+            display:none;
+        }
+    }
+
+    .showcase-section{
+        width: 1300px;
+
+        margin: auto;
+
+        display: flex;
+
+        @media (max-width: 500px){
+            width: 100%;
+        }
+
+        .showcase{
+            h1{
+                font-size: 86px;
+
+                margin: 0;
+                margin-top: 100px;
+
+                @media (max-width: 500px){
+                    font-size: 3rem;
+
+                    margin: 10px;
+
+                    text-align: center;
+                }
+            }
+
+            p{
+                margin: 0;
+                margin-top: 17px;
+                margin-bottom: 45px;
+
+                font-size: 20px;
+
+                color: #191919;
+
+                @media (max-width: 500px){
+                    text-align: center;
+
+                    margin-right: 15px;
+                    margin-left: 15px;
+                    margin-bottom: 35px;
+                }
+            }
+
+            .showcase-buttons-section{
+                display:flex;
+
+                @media (max-width: 500px){
+                    display: block;
+                }
+
+                a{
+                    width: 200px;
+                    height: 60px;
+
+                    margin-right: 15px;
+
+                    @media (max-width: 500px){
+                        margin: auto;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                #learn-more{
+                    background-color: transparent;
+
+                    border: 1px solid black;
+
+                    width: 180px;
+
+                    &:hover{
+                        color: black;
+
+                        border: 1px solid rgb(110, 110, 110);
+
+                        background-color: rgba(0, 0, 0, 0.048);
+                    }
+                }
+            }
+        }
+
+        img{
+            margin-top: 40px;
+            margin-right: -50px;
+
+            @media (max-width: 500px){
+                display:none;
             }
         }
     }
