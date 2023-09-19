@@ -10,6 +10,24 @@ html, body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+p {
+  line-height: 30px;
+}
+
+h6 {
+  color: red;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 42px;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 33px;
+}
+
 .login-button {
   width: 122px;
   height: 48px;
@@ -21,17 +39,6 @@ html, body {
   justify-content: center;
   align-items: center;
   background-color: #F9D783;
-}
-@media (max-width: 992px) {
-  .login-button {
-    width: 110px;
-  }
-}
-@media (max-width: 768px) {
-  .login-button {
-    margin: auto;
-    margin-top: 18px;
-  }
 }
 .login-button i {
   margin-left: 13px;
@@ -159,6 +166,17 @@ header .header-container .header .nav {
   position: absolute;
   bottom: 0;
 }
+@media (max-width: 992px) {
+  header .header-container .header .nav .login-button {
+    width: 110px;
+  }
+}
+@media (max-width: 768px) {
+  header .header-container .header .nav .login-button {
+    margin: auto;
+    margin-top: 18px;
+  }
+}
 @media (min-width: 769px) {
   header .header-container .header .nav {
     display: flex !important;
@@ -249,6 +267,7 @@ header .header-container .header .menu {
   top: 35px;
   background-color: transparent;
   border-radius: 5px;
+  cursor: pointer;
 }
 @media (min-width: 769px) {
   header .header-container .header .menu {
@@ -257,7 +276,6 @@ header .header-container .header .menu {
 }
 header .header-container .header .menu:hover {
   background-color: rgba(0, 0, 0, 0.068);
-  cursor: pointer;
 }
 header .header-container .header .menu i {
   font-size: 2.8rem;
@@ -285,7 +303,7 @@ header .header-container .header .menu i {
   }
 }
 .showcase-section .showcase-container {
-  width: 1300px;
+  width: 1280px;
   margin: auto;
   display: flex;
 }
@@ -431,8 +449,7 @@ header .header-container .header .menu i {
   justify-content: center;
   align-items: center;
   background-color: white;
-  margin-top: 72px;
-  margin-bottom: 72px;
+  margin: 72px 0;
 }
 .logo-section .logo-container {
   width: 100%;
@@ -489,22 +506,10 @@ header .header-container .header .menu i {
     text-align: center;
   }
 }
-.features-section .features-header .features-header-container h6 {
-  color: red;
-  margin: 0;
-  font-size: 17px;
-  font-weight: 600;
-}
 @media (max-width: 1200px) {
   .features-section .features-header .features-header-container h6 {
     text-align: center;
   }
-}
-.features-section .features-header .features-header-container h2 {
-  font-size: 42px;
-  margin: 0;
-  margin-top: 15px;
-  margin-bottom: 33px;
 }
 @media (max-width: 1200px) {
   .features-section .features-header .features-header-container h2 {
@@ -549,6 +554,7 @@ header .header-container .header .menu i {
   .features-section .features-grid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
+    margin-bottom: 30px;
   }
 }
 .features-section .features-grid .features-grid-container {
@@ -585,4 +591,90 @@ header .header-container .header .menu i {
 }
 .features-section .features-grid .features-grid-container p {
   margin: 0;
+  color: #4e4e4e;
+}
+
+.about-section {
+  width: 95%;
+  max-width: 1320px;
+  margin: 110px auto;
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(auto-fit, 600px);
+}
+.about-section .woman-container {
+  position: relative;
+  margin: 0 30px 0 30px;
+  max-width: 533px;
+}
+.about-section .woman-container .element {
+  position: absolute;
+  top: 40px;
+  left: -30px;
+}
+.about-section .woman-container .founder {
+  position: absolute;
+  left: -50px;
+  bottom: 45px;
+  width: 368px;
+  background-color: #BEEBFF;
+  box-shadow: -9px 11px 19px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -9px 11px 19px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -9px 11px 19px 5px rgba(0, 0, 0, 0.1);
+}
+.about-section .woman-container h4 {
+  margin: 30px 0 20px 30px;
+  font-size: 20px;
+}
+.about-section .woman-container h4 span {
+  font-size: 16px;
+  color: red;
+}
+.about-section .woman-container p {
+  margin: 0 0 40px 30px;
+}
+.about-section .about-container {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  margin-left: 30px;
+  margin-top: 30px;
+  max-width: 533px;
+}
+.about-section .about-container h2 {
+  margin-bottom: 25px;
+}
+.about-section .about-container p {
+  color: #4e4e4e;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.about-section .about-container .about-buttons {
+  display: flex;
+}
+.about-section .about-container .about-buttons #learn-more {
+  width: 180px;
+  background-color: #191919;
+  color: white;
+  margin-right: 20px;
+}
+.about-section .about-container .about-buttons #learn-more:hover {
+  background-color: white;
+  color: #191919;
+  border: 1px solid black;
+}
+.about-section .about-container .about-buttons button {
+  width: 48px;
+  height: 48px;
+  margin: 0 20px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+.about-section .about-container .about-buttons button:hover {
+  background-color: #191919;
+  color: white;
+}
+.about-section .about-container .about-buttons p {
+  margin: auto 0;
 }
