@@ -9,48 +9,50 @@
 </head>
 <body>
     <header>
-        <img alt="logo" src="images/Logo.svg">
-        <div class="header">
-            <div class="contact">
-                <div class="info">
-                    <i class="fa-regular fa-phone"></i>
-                    +46 (8) 121 470 50
-                </div>
-                <div class="info">
-                    <i class="fa-regular fa-envelope"></i>
-                    info@crito.com
-                </div>
-                <div id="location-social" class="info">
-                    <div class="location">
-                        <i class="fa-sharp fa-regular fa-location-dot"></i>
-                        Sveavägen 31, 111 34 STOCKHOLM
+        <div class="header-container">
+            <img alt="logo" src="images/Logo.svg">
+            <div class="header">
+                <div class="contact">
+                    <div class="info">
+                        <i class="fa-regular fa-phone"></i>
+                        +46 (8) 121 470 50
                     </div>
-                    <div class="social">
-                       <a href="https://facebook.com"> <i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://twitter.com"> <i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="https://instagram.com"> <i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://linkedin.com"> <i class="fa-brands fa-linkedin"></i></a>
+                    <div class="info">
+                        <i class="fa-regular fa-envelope"></i>
+                        info@crito.com
                     </div>
-
+                    <div id="location-social" class="info">
+                        <div class="location">
+                            <i class="fa-sharp fa-regular fa-location-dot"></i>
+                            Sveavägen 31, 111 34 STOCKHOLM
+                        </div>
+                        <div class="social">
+                           <a href="https://facebook.com"> <i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com"> <i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://instagram.com"> <i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://linkedin.com"> <i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+    
+                    </div>
                 </div>
+                <div id="nav" class="nav">
+                    <nav>
+                        <a href="#" id="here">Home</a>
+                        <a href="#">Service</a>
+                        <a href="#">News</a>
+                        <a href="#">Contact</a>
+                    </nav>
+                    <a class="login-button" href="#">Login <i class="fa-solid fa-arrow-up-right"></i></a>
+                </div>
+                <button onclick="myFunction()" class="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
-            <div id="nav" class="nav">
-                <nav>
-                    <a href="#" id="here">Home</a>
-                    <a href="#">Service</a>
-                    <a href="#">News</a>
-                    <a href="#">Contact</a>
-                </nav>
-                <a class="login-button" href="#">Login <i class="fa-solid fa-arrow-up-right"></i></a>
-            </div>
-            <button onclick="myFunction()" class="menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
         </div>
     </header>
-    <section>
-        <img class="element" src="images/Element.svg">
-        <div class="showcase-section">
+    <section class="showcase-section">
+        <img class="element" alt="white decorative lines" src="images/Element.svg">
+        <div class="showcase-container">
             <div class="showcase">
                 <h1>
                     We Provide The Best Business Solutions
@@ -64,6 +66,68 @@
                 </div>
             </div>
             <img src="images/Image.png">
+        </div>
+    </section>
+    <section class="logo-section">
+        <div class="logo-container">
+            <img src="images/Paperz.svg">
+            <img src="images/Dorfus.svg">
+            <img src="images/Martino.svg">
+            <img src="images/Square.svg">
+            <img src="images/Gobona.svg">
+        </div>
+    </section>
+    <section class="features-section">
+        <div class="features-header">
+
+            <div class="features-header-container">
+                <h6>
+                    Features
+                </h6>
+                <h2>
+                    Our Accounting is trusted by thousands of companies
+                </h2>
+                <a id="learn-more" class="login-button" href="#">Learn More<i class="fa-solid fa-arrow-up-right"></i></a>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <div class="features-grid-container">
+                <i class="fa-regular fa-handshake"></i>
+                <h3>
+                    Business Advice
+                </h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+            <div class="features-grid-container">
+                <i class="fa-regular fa-lightbulb-on"></i>
+                <h3>
+                Startup Business
+                </h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+            <div class="features-grid-container">
+                <i class="fa-regular fa-money-bill-trend-up"></i>
+                <h3>
+                Financial Advice
+                </h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+            <div class="features-grid-container">
+                <i class="fa-regular fa-triangle-exclamation"></i>
+                <h3>
+                Risk Management
+                </h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+            </div>
         </div>
     </section>
     <script>
