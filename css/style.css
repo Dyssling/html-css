@@ -12,6 +12,7 @@ html, body {
 
 p {
   line-height: 30px;
+  color: #4e4e4e;
 }
 
 h6 {
@@ -46,6 +47,35 @@ h2 {
 .login-button:hover {
   background-color: #191919;
   color: #F0EFE9;
+}
+
+.learn-more {
+  background-color: transparent;
+  border: 1px solid black;
+  width: 180px;
+}
+.learn-more:hover {
+  color: black;
+  border: 1px solid rgb(110, 110, 110);
+  background-color: rgba(0, 0, 0, 0.048);
+}
+
+.element {
+  width: 650px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+@media (max-width: 1400px) {
+  .element {
+    width: 500px;
+  }
+}
+@media (max-width: 768px) {
+  .element {
+    display: none;
+  }
 }
 
 header {
@@ -285,23 +315,6 @@ header .header-container .header .menu i {
   position: relative;
   background-color: #F0EFE9;
 }
-.showcase-section .element {
-  width: 650px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  pointer-events: none;
-}
-@media (max-width: 1400px) {
-  .showcase-section .element {
-    width: 500px;
-  }
-}
-@media (max-width: 768px) {
-  .showcase-section .element {
-    display: none;
-  }
-}
 .showcase-section .showcase-container {
   width: 1280px;
   margin: auto;
@@ -412,16 +425,6 @@ header .header-container .header .menu i {
     margin: auto;
     margin-bottom: 20px;
   }
-}
-.showcase-section .showcase-container .showcase .showcase-buttons-section #learn-more {
-  background-color: transparent;
-  border: 1px solid black;
-  width: 180px;
-}
-.showcase-section .showcase-container .showcase .showcase-buttons-section #learn-more:hover {
-  color: black;
-  border: 1px solid rgb(110, 110, 110);
-  background-color: rgba(0, 0, 0, 0.048);
 }
 .showcase-section .showcase-container img {
   margin-top: 40px;
@@ -591,7 +594,6 @@ header .header-container .header .menu i {
 }
 .features-section .features-grid .features-grid-container p {
   margin: 0;
-  color: #4e4e4e;
 }
 
 .about-section {
@@ -602,15 +604,38 @@ header .header-container .header .menu i {
   justify-content: space-around;
   grid-template-columns: repeat(auto-fit, 600px);
 }
+@media (max-width: 768px) {
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+}
 .about-section .woman-container {
   position: relative;
   margin: 0 30px 0 30px;
   max-width: 533px;
 }
+@media (max-width: 768px) {
+  .about-section .woman-container {
+    width: 350px;
+    margin: auto;
+  }
+}
+@media (max-width: 768px) {
+  .about-section .woman-container .woman {
+    width: 350px;
+  }
+}
 .about-section .woman-container .element {
   position: absolute;
   top: 40px;
   left: -30px;
+}
+@media (max-width: 768px) {
+  .about-section .woman-container .element {
+    width: 150px;
+    top: 30px;
+    left: -20px;
+  }
 }
 .about-section .woman-container .founder {
   position: absolute;
@@ -621,6 +646,13 @@ header .header-container .header .menu i {
   box-shadow: -9px 11px 19px 5px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: -9px 11px 19px 5px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: -9px 11px 19px 5px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .about-section .woman-container .founder {
+    left: 0;
+    bottom: 0;
+    width: 350px;
+  }
 }
 .about-section .woman-container h4 {
   margin: 30px 0 20px 30px;
@@ -640,16 +672,44 @@ header .header-container .header .menu i {
   margin-top: 30px;
   max-width: 533px;
 }
+@media (max-width: 768px) {
+  .about-section .about-container {
+    margin: 30px auto;
+  }
+}
+@media (max-width: 768px) {
+  .about-section .about-container h6 {
+    text-align: center;
+  }
+}
 .about-section .about-container h2 {
   margin-bottom: 25px;
 }
+@media (max-width: 768px) {
+  .about-section .about-container h2 {
+    text-align: center;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+}
 .about-section .about-container p {
-  color: #4e4e4e;
   margin-top: 0;
   margin-bottom: 30px;
 }
+@media (max-width: 768px) {
+  .about-section .about-container p {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+}
 .about-section .about-container .about-buttons {
   display: flex;
+}
+@media (max-width: 768px) {
+  .about-section .about-container .about-buttons {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
 }
 .about-section .about-container .about-buttons #learn-more {
   width: 180px;
@@ -661,6 +721,11 @@ header .header-container .header .menu i {
   background-color: white;
   color: #191919;
   border: 1px solid black;
+}
+@media (max-width: 768px) {
+  .about-section .about-container .about-buttons #learn-more {
+    margin-right: 10px;
+  }
 }
 .about-section .about-container .about-buttons button {
   width: 48px;
@@ -675,6 +740,105 @@ header .header-container .header .menu i {
   background-color: #191919;
   color: white;
 }
+@media (max-width: 768px) {
+  .about-section .about-container .about-buttons button {
+    margin: 0 15px;
+  }
+}
 .about-section .about-container .about-buttons p {
   margin: auto 0;
+}
+
+.services-section {
+  background-color: #F0EFE9;
+  position: relative;
+}
+.services-section .element {
+  left: auto;
+  right: 0;
+}
+.services-section .services-container {
+  max-width: 1380px;
+  padding: 100px 40px;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .services-section .services-container h6 {
+    text-align: center;
+  }
+}
+.services-section .services-container h2 {
+  width: 500px;
+}
+@media (max-width: 768px) {
+  .services-section .services-container h2 {
+    width: auto;
+    text-align: center;
+  }
+}
+.services-section .services-container .learn-more {
+  margin: 40px auto 0 auto;
+}
+.services-section .services-container .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(308px, 1fr));
+  justify-content: space-between;
+  gap: 20px;
+}
+.services-section .services-container .services-grid .services-grid-container {
+  background-color: white;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  height: 330px;
+}
+.services-section .services-container .services-grid .services-grid-container h4 {
+  font-size: 20px;
+  margin: 0 25px;
+}
+.services-section .services-container .services-grid .services-grid-container h4::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 40px;
+  margin: 40px 0 30px 0;
+  background-color: black;
+}
+.services-section .services-container .services-grid .services-grid-container p {
+  margin: 10px 25px;
+  margin-bottom: 0;
+}
+.services-section .services-container .services-grid .services-grid-container div {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.services-section .services-container .services-grid .services-grid-container div a {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+}
+.services-section .services-container .services-grid .services-grid-container div a:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.services-section .services-container .services-grid .startup {
+  background-color: #F9D783;
+}
+.services-section .services-container .services-grid .startup div a {
+  background-color: white;
+  color: black;
+}
+.services-section .services-container .services-grid .startup div a:hover {
+  background-color: black;
+  color: white;
+  border: none;
 }
