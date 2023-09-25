@@ -88,6 +88,20 @@ h2{
     }
 }
 
+.black{
+    background-color: black;
+
+    color: white;
+
+    &:hover{
+        color:black;
+
+        background-color: white;
+
+        border: 1px solid black;
+    }
+}
+
 .element{
     width: 650px;
 
@@ -841,21 +855,10 @@ header{
                 margin-left: 8px;
             }
 
-            #learn-more{
+            .black{
                 width: 180px;
 
-                background-color: #191919;
-
-                color: white;
-
                 margin-right: 20px;
-
-                &:hover{
-                    background-color:white;
-                    color:#191919;
-
-                    border: 1px solid black;
-                }
 
                 @media (max-width: 768px){
                     margin-right: 10px;
@@ -1207,23 +1210,11 @@ header{
             }
         }
 
-        .learn-more{
+        .black{
             margin: auto;
             margin-top: 10px;
 
-            background-color: black;
-            border: none;
-
-            color: white;
-
             width: 250px;
-
-            &:hover{
-                background-color: white;
-                border: 1px solid black;
-
-                color: black;
-            }
         }
     }
 }
@@ -1316,6 +1307,92 @@ header{
                     cursor:auto;
                 }
             }
+        }
+    }
+}
+
+.testimonial-section{
+    background-color: #F0D082;
+
+    padding: 0 40px;
+
+    @media (max-width: 768px){
+        padding: 0 30px;
+    }
+
+    .testimonial-section-container{
+        background-color: white;
+
+        max-width: 1570px;
+        padding: 100px 50px;
+
+        margin: auto;
+
+        @media (max-width: 768px){
+            padding: 100px 30px;
+        }
+
+        h6{
+            text-align: center;
+        }
+
+        h2{
+            text-align: center;
+            
+            margin-right: 0;
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            justify-content: space-around;
+
+            .testimonial-grid-container{
+                margin: 50px;
+                
+                i{
+                    color: red;
+
+                    margin-bottom: 5px;
+
+                    font-size: 14px;
+                }
+
+                p{
+                    font-size: 18px;
+                }
+
+                .name{
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+
+                    margin-top: 25px;
+
+                    div{
+                        margin-left: 15px;
+                        h4{
+                            margin: 0;
+                        }
+
+                        p{
+                            margin: 0;
+
+                            font-size: 16px;
+
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+        .black{
+            width: 180px;
+
+            margin: auto;
+            margin-top: 20px;
         }
     }
 }

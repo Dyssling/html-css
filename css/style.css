@@ -73,6 +73,16 @@ h2 {
   background-color: rgba(0, 0, 0, 0.048);
 }
 
+.black {
+  background-color: black;
+  color: white;
+}
+.black:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+
 .element {
   width: 650px;
   position: absolute;
@@ -719,19 +729,12 @@ header .header-container .header .menu i {
     margin-left: 8px;
   }
 }
-.about-section .about-container .about-buttons #learn-more {
+.about-section .about-container .about-buttons .black {
   width: 180px;
-  background-color: #191919;
-  color: white;
   margin-right: 20px;
 }
-.about-section .about-container .about-buttons #learn-more:hover {
-  background-color: white;
-  color: #191919;
-  border: 1px solid black;
-}
 @media (max-width: 768px) {
-  .about-section .about-container .about-buttons #learn-more {
+  .about-section .about-container .about-buttons .black {
     margin-right: 10px;
   }
 }
@@ -1013,18 +1016,10 @@ header .header-container .header .menu i {
 .projects-section .projects-section-container .projects-grid .projects-grid-container div a:hover {
   color: #5a5a5a;
 }
-.projects-section .projects-section-container .learn-more {
+.projects-section .projects-section-container .black {
   margin: auto;
   margin-top: 10px;
-  background-color: black;
-  border: none;
-  color: white;
   width: 250px;
-}
-.projects-section .projects-section-container .learn-more:hover {
-  background-color: white;
-  border: 1px solid black;
-  color: black;
 }
 
 .team-section {
@@ -1096,4 +1091,72 @@ header .header-container .header .menu i {
 .team-section .team-section-container .dot-container #here:hover {
   outline: none;
   cursor: auto;
+}
+
+.testimonial-section {
+  background-color: #F0D082;
+  padding: 0 40px;
+}
+@media (max-width: 768px) {
+  .testimonial-section {
+    padding: 0 30px;
+  }
+}
+.testimonial-section .testimonial-section-container {
+  background-color: white;
+  max-width: 1570px;
+  padding: 100px 50px;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .testimonial-section .testimonial-section-container {
+    padding: 100px 30px;
+  }
+}
+.testimonial-section .testimonial-section-container h6 {
+  text-align: center;
+}
+.testimonial-section .testimonial-section-container h2 {
+  text-align: center;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+.testimonial-section .testimonial-section-container .testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-content: space-around;
+}
+.testimonial-section .testimonial-section-container .testimonial-grid .testimonial-grid-container {
+  margin: 50px;
+}
+.testimonial-section .testimonial-section-container .testimonial-grid .testimonial-grid-container i {
+  color: red;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.testimonial-section .testimonial-section-container .testimonial-grid .testimonial-grid-container p {
+  font-size: 18px;
+}
+.testimonial-section .testimonial-section-container .testimonial-grid .testimonial-grid-container .name {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 25px;
+}
+.testimonial-section .testimonial-section-container .testimonial-grid .testimonial-grid-container .name div {
+  margin-left: 15px;
+}
+.testimonial-section .testimonial-section-container .testimonial-grid .testimonial-grid-container .name div h4 {
+  margin: 0;
+}
+.testimonial-section .testimonial-section-container .testimonial-grid .testimonial-grid-container .name div p {
+  margin: 0;
+  font-size: 16px;
+  color: red;
+}
+.testimonial-section .testimonial-section-container .black {
+  width: 180px;
+  margin: auto;
+  margin-top: 20px;
 }
