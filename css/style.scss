@@ -84,7 +84,7 @@ h2{
     &:hover{
         color: black;
 
-        background-color: rgba(0, 0, 0, 0.048);
+        background-color: rgba(0, 0, 0, 0.04);
     }
 }
 
@@ -117,6 +117,42 @@ h2{
 
     @media (max-width: 768px){
         display:none;
+    }
+}
+
+.dot-container{
+    width: 120px;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    
+    button{
+        height: 12px;
+        width: 12px;
+
+        border-radius: 50%;
+        border: none;
+
+        background-color: rgba(0, 0, 0, 0.2);
+
+        cursor: pointer;
+
+        &:hover{
+            outline: 2px solid rgba(0, 0, 0, 0.2);
+
+        }
+    }
+
+    #here{
+        background-color: black;
+
+        &:hover{
+            outline: none;
+
+            cursor:auto;
+        }
     }
 }
 
@@ -399,7 +435,7 @@ header{
                 }
     
                 &:hover{
-                    background-color: rgba(0, 0, 0, 0.068);
+                    background-color: rgba(0, 0, 0, 0.04);
                 }
     
                 i{
@@ -926,6 +962,7 @@ header{
 
         .learn-more{
             margin: 40px auto 0 auto;
+            width: 210px;
         }
 
         .services-grid{
@@ -1272,42 +1309,6 @@ header{
                 margin-bottom: 20px;
             }
         }
-
-        .dot-container{
-            width: 120px;
-
-            margin: auto;
-
-            display: flex;
-            justify-content: space-between;
-            
-            button{
-                height: 12px;
-                width: 12px;
-
-                border-radius: 50%;
-                border: none;
-
-                background-color: rgba(0, 0, 0, 0.2);
-
-                cursor: pointer;
-
-                &:hover{
-                    outline: 2px solid rgba(0, 0, 0, 0.2);
-
-                }
-            }
-
-            #here{
-                background-color: black;
-
-                &:hover{
-                    outline: none;
-
-                    cursor:auto;
-                }
-            }
-        }
     }
 }
 
@@ -1315,9 +1316,11 @@ header{
     background-color: #F0D082;
 
     padding: 0 40px;
+    padding-bottom: 70px;
 
     @media (max-width: 768px){
-        padding: 0 30px;
+        padding-right: 30px;
+        padding-left: 30px;
     }
 
     .testimonial-section-container{
@@ -1327,6 +1330,8 @@ header{
         padding: 100px 50px;
 
         margin: auto;
+
+        
 
         @media (max-width: 768px){
             padding: 100px 30px;
@@ -1393,6 +1398,119 @@ header{
 
             margin: auto;
             margin-top: 20px;
+        }
+    }
+}
+
+.news-section{
+    .news-section-container{
+        max-width: 1380px;
+        padding: 60px 40px;
+
+        margin: auto;
+        .news-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+
+            margin-bottom: 40px;
+
+            @media (max-width: 768px){
+                display: block;
+            }
+
+            .news-header-container{
+                h2{
+                    margin-bottom: 0;
+                }
+            }
+
+            .learn-more{
+                margin-left: 25px;
+
+                min-width: 180px;
+
+                @media (max-width: 768px){
+                    margin: auto;
+                    margin-top: 25px;
+                }
+            }
+        }
+
+        .news-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 420px);
+            justify-content: space-evenly;
+            gap: 20px;
+
+            @media (max-width: 768px){
+                grid-template-columns: repeat(auto-fit, 340px);
+            }
+
+            .news-grid-container{
+                text-decoration: none;
+
+                margin-bottom: 45px;
+
+                position:relative;
+
+                &:hover{
+                    background-color: rgba(0, 0, 0, 0.04);
+
+                    outline: 5px solid rgba(0, 0, 0, 0.04);
+                }
+
+                .date{
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+
+                    background-color: #F9D783;
+
+                    width: 56px;
+                    height: 64px;
+
+                    display: grid;
+                    align-items: center;
+
+                    h4{
+                        font-size: 22px;
+                        font-weight: bold;
+                        color: black;
+    
+                        text-align: center;
+
+                        margin: 0 auto;
+                    }
+
+                    span{
+                        font-size: 16px;
+                        font-weight: 400;
+
+                        display: block;
+
+                        margin-top: -3px;
+                    }
+                }
+
+                img{
+                    margin-bottom: 18px;
+
+                    @media (max-width: 768px){
+                        width: 340px;
+                    }
+                }
+                p{
+                    margin: 0 10px 10px 10px;
+                }
+                h4{
+                    width: 60%;
+
+                    margin: 13px 10px 10px 10px;
+
+                    color: black;
+                }
+            }
         }
     }
 }
