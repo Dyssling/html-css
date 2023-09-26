@@ -47,6 +47,18 @@ h2{
     }
 }
 
+.social{
+    i{
+        font-size: 16px;
+
+        margin-right: 0.3vw;
+
+        &:hover{
+            color: #5a5a5a;
+        }
+    }
+}
+
 .login-button{
     width: 122px;
     height: 48px;
@@ -1404,6 +1416,7 @@ header{
         padding: 60px 40px;
 
         margin: auto;
+
         .news-header{
             display: flex;
             justify-content: space-between;
@@ -1435,12 +1448,12 @@ header{
 
         .news-grid{
             display: grid;
-            grid-template-columns: repeat(auto-fit, 420px);
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
             justify-content: space-evenly;
             gap: 20px;
 
             @media (max-width: 768px){
-                grid-template-columns: repeat(auto-fit, 340px);
+                grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             }
 
             .news-grid-container{
@@ -1492,9 +1505,11 @@ header{
                 img{
                     margin-bottom: 18px;
 
-                    @media (max-width: 768px){
-                        width: 340px;
-                    }
+                    width: 100%;
+
+                    // @media (max-width: 768px){
+                    //     width: 340px;
+                    // }
                 }
                 p{
                     margin: 0 10px 10px 10px;
@@ -1604,6 +1619,159 @@ header{
 
                 @media (max-width: 768px){
                     margin: auto;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background-color: #0E1021;
+
+    p, a{
+        color: rgb(189, 189, 189);
+    }
+
+    .footer-nav{
+        max-width: 1380px;
+        padding: 100px 40px;
+
+        margin: auto;
+
+        display:grid;
+        grid-template-columns: 1fr 3fr;
+        align-items: center;
+
+        @media (max-width: 1200px){
+            grid-template-columns: 1fr;
+
+            padding: 60px 20px;
+        }
+
+        .footer-about{
+            margin-right: 25px;
+
+            p{
+                margin-bottom: 0;
+            }
+
+            @media (max-width: 1200px){
+                margin: auto;
+                margin-bottom: 20px;
+
+                width: 500px;
+
+                img{
+                    display: block;
+                    margin: auto;
+                    margin-bottom: 22px;
+                }
+
+                p{
+                    text-align: center;
+                }
+            }
+
+            @media (max-width: 768px){
+                max-width: 500px;
+                width: 80%;
+            }
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-around;
+
+            margin-left: 15px;
+
+            @media (max-width: 768px){
+                margin: 0;
+
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+                justify-content: space-around;
+                gap: 20px;
+            }
+
+            div{
+                @media (max-width: 768px){
+                    text-align: center;
+                }
+                
+                h4{
+                    color: white;
+
+                    margin-bottom: 30px;
+                }
+                a{
+                    display: block;
+
+                    text-decoration: none;
+
+                    margin: 15px 0;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom{
+        border-top: 1px solid #ffffff2c;
+        
+        .footer-bottom-container{
+            max-width: 1380px;
+            padding: 10px 40px;
+    
+            margin: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media (max-width: 768px){
+                display: block;
+            }
+
+            .social{
+                i{
+                    font-size: 16px;
+
+                    margin-left: 15px;
+
+                    &:hover{
+                        color: #ffffff7a;
+                    }
+                }
+
+                @media (max-width: 768px){
+                    display: none;
+                }
+            }
+
+            .mobile{
+                display: none;
+
+                i{
+                    margin: 0;
+                }
+
+                @media (max-width: 768px){
+                    display: flex;
+                    justify-content: space-around;
+
+                    width: 200px;
+
+                    margin: auto;
+                    margin-top: 15px;
+                }
+            }
+
+            p{
+                @media (max-width: 768px){
+                    text-align: center;
                 }
             }
         }
