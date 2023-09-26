@@ -212,30 +212,30 @@ header .header-container .header .info i {
   font-size: 20px;
   color: #191919;
 }
-header .header-container .header #location-social {
+header .header-container .header .location-social {
   width: calc(100% - 370px);
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 1200px) {
-  header .header-container .header #location-social {
+  header .header-container .header .location-social {
     justify-content: end;
     width: 100%;
   }
 }
-header .header-container .header #location-social::after {
+header .header-container .header .location-social::after {
   display: none;
 }
 @media (max-width: 1200px) {
-  header .header-container .header #location-social .location {
+  header .header-container .header .location-social .location {
     display: none;
   }
 }
-header .header-container .header #location-social .social i {
+header .header-container .header .location-social .social i {
   font-size: 16px;
   margin-right: 0.3vw;
 }
-header .header-container .header #location-social .social i:hover {
+header .header-container .header .location-social .social i:hover {
   color: #5a5a5a;
 }
 header .header-container .header .nav {
@@ -569,18 +569,18 @@ header .header-container .header .menu i {
     margin-bottom: 43px;
   }
 }
-.features-section .features-header .features-header-container #learn-more {
+.features-section .features-header .features-header-container .login-button {
   width: 95%;
 }
 @media (max-width: 1200px) {
-  .features-section .features-header .features-header-container #learn-more {
+  .features-section .features-header .features-header-container .login-button {
     margin: auto;
     margin-bottom: 50px;
     width: 75%;
   }
 }
 @media (max-width: 768px) {
-  .features-section .features-header .features-header-container #learn-more {
+  .features-section .features-header .features-header-container .login-button {
     margin-bottom: 0;
   }
 }
@@ -1252,4 +1252,91 @@ header .header-container .header .menu i {
   width: 60%;
   margin: 13px 10px 10px 10px;
   color: black;
+}
+
+.signup-section {
+  background-color: #F0EFE9;
+  margin-top: 20px;
+  position: relative;
+}
+.signup-section img {
+  position: absolute;
+  bottom: 58px;
+  right: 0;
+}
+@media (max-width: 1500px) {
+  .signup-section img {
+    width: 120px;
+    bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .signup-section img {
+    display: none;
+  }
+}
+.signup-section .signup-section-container {
+  max-width: 1380px;
+  padding: 100px 40px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .signup-section .signup-section-container {
+    display: block;
+    padding: 60px 20px;
+  }
+}
+.signup-section .signup-section-container h2 {
+  margin: 0 0 5px 0;
+  text-align: center;
+}
+.signup-section .signup-section-container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .signup-section .signup-section-container form {
+    display: block;
+    margin-top: 30px;
+  }
+}
+.signup-section .signup-section-container form input {
+  width: 300px;
+  height: 48px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  padding: 0 30px;
+  margin-right: 15px;
+}
+.signup-section .signup-section-container form input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+.signup-section .signup-section-container form input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+.signup-section .signup-section-container form input:focus {
+  outline: 1px solid black;
+}
+@media (max-width: 768px) {
+  .signup-section .signup-section-container form input {
+    margin: auto;
+    margin-bottom: 30px;
+    display: block;
+  }
+}
+.signup-section .signup-section-container form .login-button {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 150px;
+}
+@media (max-width: 768px) {
+  .signup-section .signup-section-container form .login-button {
+    margin: auto;
+  }
 }
