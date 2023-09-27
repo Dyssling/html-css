@@ -166,9 +166,10 @@ header .header-container .header .contact .location-social::after {
   }
 }
 header .header-container .header .contact .location-social .social a {
-  margin-right: 0.3vw;
+  margin-right: 10px;
 }
 header .header-container .header .contact .location-social .social a i {
+  margin: 0;
   font-size: 16px;
 }
 header .header-container .header .contact .location-social .social a i:hover {

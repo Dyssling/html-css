@@ -232,9 +232,10 @@ header .header-container .header .contact .location-social::after {
   }
 }
 header .header-container .header .contact .location-social .social a {
-  margin-right: 0.3vw;
+  margin-right: 10px;
 }
 header .header-container .header .contact .location-social .social a i {
+  margin: 0;
   font-size: 16px;
 }
 header .header-container .header .contact .location-social .social a i:hover {
@@ -412,9 +413,10 @@ main .showcase-section .showcase-container .showcase h1 {
 }
 @media (max-width: 768px) {
   main .showcase-section .showcase-container .showcase h1 {
+    padding: 0 20px;
     font-size: 3rem;
-    margin: 10px;
     text-align: center;
+    margin: 10px;
   }
 }
 main .showcase-section .showcase-container .showcase p {
@@ -439,6 +441,7 @@ main .showcase-section .showcase-container .showcase p {
 }
 @media (max-width: 768px) {
   main .showcase-section .showcase-container .showcase p {
+    padding: 0 20px;
     text-align: center;
     margin-right: 15px;
     margin-left: 15px;
