@@ -54,13 +54,14 @@ h2 {
   justify-content: center;
   align-items: center;
   background-color: #F9D783;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 .login-button i {
   margin-left: 13px;
 }
 .login-button:hover {
-  background-color: #191919;
-  color: #F0EFE9;
+  background-color: black;
+  color: white;
 }
 
 .learn-more {
@@ -69,18 +70,18 @@ h2 {
   width: 180px;
 }
 .learn-more:hover {
-  color: black;
-  background-color: rgba(0, 0, 0, 0.04);
+  color: white;
+  background-color: black;
 }
 
 .black {
   background-color: black;
   color: white;
+  border: 1px solid black;
 }
 .black:hover {
   color: black;
   background-color: white;
-  border: 1px solid black;
 }
 
 .element {
@@ -114,16 +115,19 @@ h2 {
   border: none;
   background-color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  outline: 2px solid transparent;
+  transition: outline 0.05s ease-in-out;
 }
 .dot-container button:hover {
   outline: 2px solid rgba(0, 0, 0, 0.2);
 }
 .dot-container .here {
   background-color: black;
+  cursor: auto;
+  outline: none;
 }
 .dot-container .here:hover {
   outline: none;
-  cursor: auto;
 }
 
 header {
@@ -237,6 +241,7 @@ header .header-container .header .contact .location-social .social a {
 header .header-container .header .contact .location-social .social a i {
   margin: 0;
   font-size: 16px;
+  transition: color 0.1s ease-in-out;
 }
 header .header-container .header .contact .location-social .social a i:hover {
   color: #5a5a5a;
@@ -304,12 +309,13 @@ header .header-container .header .nav nav a {
     padding-bottom: 27px;
     display: block;
     font-size: 1.1rem;
+    transition: background-color 0.15s ease-in-out;
   }
   header .header-container .header .nav nav a:hover {
     background-color: rgba(0, 0, 0, 0.068);
   }
 }
-header .header-container .header .nav nav a:hover::after {
+header .header-container .header .nav nav a::after {
   content: "";
   margin: auto;
   position: absolute;
@@ -318,12 +324,16 @@ header .header-container .header .nav nav a:hover::after {
   left: 0;
   width: 60%;
   height: 2px;
-  background-color: #191919;
+  background-color: transparent;
+  transition: background-color 0.15s ease-in-out;
 }
 @media (max-width: 768px) {
-  header .header-container .header .nav nav a:hover::after {
+  header .header-container .header .nav nav a::after {
     display: none;
   }
+}
+header .header-container .header .nav nav a:hover::after {
+  background-color: #191919;
 }
 header .header-container .header .nav nav .here::after {
   content: "";
@@ -349,6 +359,7 @@ header .header-container .header .menu {
   background-color: transparent;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
 }
 @media (min-width: 769px) {
   header .header-container .header .menu {
@@ -356,7 +367,7 @@ header .header-container .header .menu {
   }
 }
 header .header-container .header .menu:hover {
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgba(0, 0, 0, 0.068);
 }
 header .header-container .header .menu i {
   font-size: 2.8rem;
@@ -773,6 +784,7 @@ main .about-section .about-container .about-buttons button {
   border-radius: 50%;
   background-color: white;
   cursor: pointer;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 main .about-section .about-container .about-buttons button:hover {
   background-color: #191919;
@@ -860,11 +872,12 @@ main .services-section .services-container .services-grid .services-grid-contain
   justify-content: center;
   align-items: center;
   margin-right: 30px;
+  border: 1px solid black;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 main .services-section .services-container .services-grid .services-grid-container div a:hover {
   background-color: white;
   color: black;
-  border: 1px solid black;
 }
 main .services-section .services-container .services-grid .startup {
   background-color: #F9D783;
@@ -872,11 +885,11 @@ main .services-section .services-container .services-grid .startup {
 main .services-section .services-container .services-grid .startup div a {
   background-color: white;
   color: black;
+  border: none;
 }
 main .services-section .services-container .services-grid .startup div a:hover {
   background-color: black;
   color: white;
-  border: none;
 }
 main .choose-us-section {
   position: relative;
@@ -1034,12 +1047,18 @@ main .projects-section .projects-section-container .projects-grid .projects-grid
   align-items: center;
 }
 main .projects-section .projects-section-container .projects-grid .projects-grid-container div a {
-  text-decoration: none;
+  -webkit-text-decoration: underline 1px transparent;
+          text-decoration: underline 1px transparent;
   color: black;
   margin: 25px;
+  transition: color 0.1s ease-in-out, -webkit-text-decoration 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out, text-decoration 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out, text-decoration 0.1s ease-in-out, -webkit-text-decoration 0.1s ease-in-out;
 }
 main .projects-section .projects-section-container .projects-grid .projects-grid-container div a:hover {
   color: #5a5a5a;
+  -webkit-text-decoration: underline 1px #5a5a5a;
+          text-decoration: underline 1px #5a5a5a;
 }
 main .projects-section .projects-section-container .black {
   margin: auto;
@@ -1205,6 +1224,8 @@ main .news-section .news-section-container .news-grid .news-grid-container {
   text-decoration: none;
   margin-bottom: 45px;
   position: relative;
+  outline: 5px solid transparent;
+  transition: background-color 0.15s ease-in-out, outline 0.15s ease-in-out;
 }
 main .news-section .news-section-container .news-grid .news-grid-container:hover {
   background-color: rgba(0, 0, 0, 0.04);
@@ -1413,11 +1434,16 @@ footer .footer-nav-section .footer-nav nav div h4 {
 }
 footer .footer-nav-section .footer-nav nav div a {
   display: block;
-  text-decoration: none;
+  -webkit-text-decoration: underline 1px solid transparent;
+          text-decoration: underline 1px solid transparent;
   margin: 15px 0;
+  transition: -webkit-text-decoration 0.15s ease-in-out;
+  transition: text-decoration 0.15s ease-in-out;
+  transition: text-decoration 0.15s ease-in-out, -webkit-text-decoration 0.15s ease-in-out;
 }
 footer .footer-nav-section .footer-nav nav div a:hover {
-  text-decoration: underline;
+  -webkit-text-decoration: underline 1px solid rgb(189, 189, 189);
+          text-decoration: underline 1px solid rgb(189, 189, 189);
 }
 footer .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1725490196);
@@ -1441,6 +1467,7 @@ footer .footer-bottom .footer-bottom-container .social a {
 }
 footer .footer-bottom .footer-bottom-container .social a i {
   font-size: 16px;
+  transition: color 0.1s ease-in-out;
 }
 footer .footer-bottom .footer-bottom-container .social a i:hover {
   color: rgba(255, 255, 255, 0.4784313725);

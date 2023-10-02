@@ -40,13 +40,15 @@ h4{
 
     background-color: #F9D783;
 
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+
     i{
         margin-left: 13px;
     }
     
     &:hover{
-        background-color: #191919;
-        color: #F0EFE9;
+        background-color: black;
+        color: white;
     }
 }
 
@@ -204,6 +206,8 @@ header{
                                 margin: 0;
 
                                 font-size: 16px;
+
+                                transition: color 0.1s ease-in-out;
             
                                 &:hover{
                                     color: #5a5a5a;
@@ -288,16 +292,16 @@ header{
                             display:block;
     
                             font-size: 1.1rem;
-    
-                            // color:#F0EFE9;
+
+                            transition: background-color 0.15s ease-in-out;
     
                             &:hover{
                                 background-color: rgba(0, 0, 0, 0.068);
                             }
       
                         }
-    
-                        &:hover::after{
+
+                        &::after{
                             content: '';
         
                             margin:auto;
@@ -310,12 +314,17 @@ header{
                             width: 60%;
                             height: 2px;
         
-                            background-color: #191919;
-    
+                            background-color: transparent; //Återigen för att övergången till hover effekten ska bli bra
+
+                            transition: background-color 0.15s ease-in-out;
+
                             @media (max-width: 768px){
                                 display:none;
                             }
+                        }
     
+                        &:hover::after{
+                            background-color: #191919;
                         }
     
                     }
@@ -357,13 +366,15 @@ header{
                 border-radius: 5px;
 
                 cursor: pointer;
+
+                transition: background-color 0.15s ease-in-out;
     
                 @media (min-width: 769px){
                     display:none;
                 }
     
                 &:hover{
-                    background-color: rgba(0, 0, 0, 0.04);
+                    background-color: rgba(0, 0, 0, 0.068);
                 }
     
                 i{
@@ -393,14 +404,16 @@ main{
             a{
                 display: block;
 
-                text-decoration: none;
+                text-decoration: underline 1px solid transparent;
 
                 color: black;
 
                 margin: 0 10px;
 
+                transition: text-decoration 0.15s ease-in-out;
+
                 &:hover{
-                    text-decoration: underline;
+                    text-decoration: underline 1px solid black;
                 }
 
                 &:first-child{
@@ -665,13 +678,15 @@ footer{
                     }
                     a{
                         display: block;
-    
-                        text-decoration: none;
+
+                        text-decoration: underline 1px solid transparent;
     
                         margin: 15px 0;
+
+                        transition: text-decoration 0.15s ease-in-out;
     
                         &:hover{
-                            text-decoration: underline;
+                            text-decoration: underline 1px solid rgb(189,189,189);
                         }
                     }
                 }
@@ -705,6 +720,8 @@ footer{
                     color: white;
                     i{
                         font-size: 16px;
+
+                        transition: color 0.1s ease-in-out;
     
                         &:hover{
                             color: #ffffff7a;

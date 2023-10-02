@@ -30,13 +30,14 @@ h4 {
   justify-content: center;
   align-items: center;
   background-color: #F9D783;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 .login-button i {
   margin-left: 13px;
 }
 .login-button:hover {
-  background-color: #191919;
-  color: #F0EFE9;
+  background-color: black;
+  color: white;
 }
 
 .element {
@@ -171,6 +172,7 @@ header .header-container .header .contact .location-social .social a {
 header .header-container .header .contact .location-social .social a i {
   margin: 0;
   font-size: 16px;
+  transition: color 0.1s ease-in-out;
 }
 header .header-container .header .contact .location-social .social a i:hover {
   color: #5a5a5a;
@@ -238,12 +240,13 @@ header .header-container .header .nav nav a {
     padding-bottom: 27px;
     display: block;
     font-size: 1.1rem;
+    transition: background-color 0.15s ease-in-out;
   }
   header .header-container .header .nav nav a:hover {
     background-color: rgba(0, 0, 0, 0.068);
   }
 }
-header .header-container .header .nav nav a:hover::after {
+header .header-container .header .nav nav a::after {
   content: "";
   margin: auto;
   position: absolute;
@@ -252,12 +255,16 @@ header .header-container .header .nav nav a:hover::after {
   left: 0;
   width: 60%;
   height: 2px;
-  background-color: #191919;
+  background-color: transparent;
+  transition: background-color 0.15s ease-in-out;
 }
 @media (max-width: 768px) {
-  header .header-container .header .nav nav a:hover::after {
+  header .header-container .header .nav nav a::after {
     display: none;
   }
+}
+header .header-container .header .nav nav a:hover::after {
+  background-color: #191919;
 }
 header .header-container .header .nav nav .here::after {
   content: "";
@@ -283,6 +290,7 @@ header .header-container .header .menu {
   background-color: transparent;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
 }
 @media (min-width: 769px) {
   header .header-container .header .menu {
@@ -290,7 +298,7 @@ header .header-container .header .menu {
   }
 }
 header .header-container .header .menu:hover {
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgba(0, 0, 0, 0.068);
 }
 header .header-container .header .menu i {
   font-size: 2.8rem;
@@ -309,12 +317,17 @@ main .top .breadcrumb {
 }
 main .top .breadcrumb a {
   display: block;
-  text-decoration: none;
+  -webkit-text-decoration: underline 1px solid transparent;
+          text-decoration: underline 1px solid transparent;
   color: black;
   margin: 0 10px;
+  transition: -webkit-text-decoration 0.15s ease-in-out;
+  transition: text-decoration 0.15s ease-in-out;
+  transition: text-decoration 0.15s ease-in-out, -webkit-text-decoration 0.15s ease-in-out;
 }
 main .top .breadcrumb a:hover {
-  text-decoration: underline;
+  -webkit-text-decoration: underline 1px solid black;
+          text-decoration: underline 1px solid black;
 }
 main .top .breadcrumb a:first-child {
   font-weight: 100;
@@ -509,11 +522,16 @@ footer .footer-nav-section .footer-nav nav div h4 {
 }
 footer .footer-nav-section .footer-nav nav div a {
   display: block;
-  text-decoration: none;
+  -webkit-text-decoration: underline 1px solid transparent;
+          text-decoration: underline 1px solid transparent;
   margin: 15px 0;
+  transition: -webkit-text-decoration 0.15s ease-in-out;
+  transition: text-decoration 0.15s ease-in-out;
+  transition: text-decoration 0.15s ease-in-out, -webkit-text-decoration 0.15s ease-in-out;
 }
 footer .footer-nav-section .footer-nav nav div a:hover {
-  text-decoration: underline;
+  -webkit-text-decoration: underline 1px solid rgb(189, 189, 189);
+          text-decoration: underline 1px solid rgb(189, 189, 189);
 }
 footer .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1725490196);
@@ -537,6 +555,7 @@ footer .footer-bottom .footer-bottom-container .social a {
 }
 footer .footer-bottom .footer-bottom-container .social a i {
   font-size: 16px;
+  transition: color 0.1s ease-in-out;
 }
 footer .footer-bottom .footer-bottom-container .social a i:hover {
   color: rgba(255, 255, 255, 0.4784313725);

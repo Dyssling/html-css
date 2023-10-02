@@ -65,13 +65,15 @@ h2{
 
     background-color: #F9D783;
 
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+
     i{
         margin-left: 13px;
     }
     
     &:hover{
-        background-color: #191919;
-        color: #F0EFE9;
+        background-color: black;
+        color: white;
     }
 }
 
@@ -83,9 +85,9 @@ h2{
     width: 180px;
 
     &:hover{
-        color: black;
+        color: white;
 
-        background-color: rgba(0, 0, 0, 0.04);
+        background-color: black;
     }
 }
 
@@ -94,12 +96,12 @@ h2{
 
     color: white;
 
+    border: 1px solid black;
+
     &:hover{
         color:black;
 
         background-color: white;
-
-        border: 1px solid black;
     }
 }
 
@@ -140,6 +142,10 @@ h2{
 
         cursor: pointer;
 
+        outline: 2px solid transparent; //Var tvungen att göra en transparent outline för att övergången till hover effekten inte skulle bli konstig
+
+        transition: outline 0.05s ease-in-out;
+
         &:hover{
             outline: 2px solid rgba(0, 0, 0, 0.2);
 
@@ -149,10 +155,12 @@ h2{
     .here{
         background-color: black;
 
+        cursor:auto;
+
+        outline: none;
+
         &:hover{
             outline: none;
-
-            cursor:auto;
         }
     }
 }
@@ -289,6 +297,8 @@ header{
                                 margin: 0;
 
                                 font-size: 16px;
+
+                                transition: color 0.1s ease-in-out;
             
                                 &:hover{
                                     color: #5a5a5a;
@@ -373,16 +383,16 @@ header{
                             display:block;
     
                             font-size: 1.1rem;
-    
-                            // color:#F0EFE9;
+
+                            transition: background-color 0.15s ease-in-out;
     
                             &:hover{
                                 background-color: rgba(0, 0, 0, 0.068);
                             }
       
                         }
-    
-                        &:hover::after{
+
+                        &::after{
                             content: '';
         
                             margin:auto;
@@ -395,12 +405,17 @@ header{
                             width: 60%;
                             height: 2px;
         
-                            background-color: #191919;
-    
+                            background-color: transparent; //Återigen för att övergången till hover effekten ska bli bra
+
+                            transition: background-color 0.15s ease-in-out;
+
                             @media (max-width: 768px){
                                 display:none;
                             }
+                        }
     
+                        &:hover::after{
+                            background-color: #191919;
                         }
     
                     }
@@ -442,13 +457,15 @@ header{
                 border-radius: 5px;
 
                 cursor: pointer;
+
+                transition: background-color 0.15s ease-in-out;
     
                 @media (min-width: 769px){
                     display:none;
                 }
     
                 &:hover{
-                    background-color: rgba(0, 0, 0, 0.04);
+                    background-color: rgba(0, 0, 0, 0.068);
                 }
     
                 i{
@@ -932,6 +949,8 @@ main{
                     background-color: white;
     
                     cursor: pointer;
+
+                    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
     
                     &:hover{
                         background-color:#191919;
@@ -1044,13 +1063,15 @@ main{
                             align-items: center;
     
                             margin-right: 30px;
+
+                            border: 1px solid black;
+
+                            transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
     
                             &:hover{
                                 background-color: white;
     
                                 color: black;
-    
-                                border: 1px solid black
                             }
                         }
                     }
@@ -1064,13 +1085,13 @@ main{
                             background-color: white;
         
                             color: black;
+
+                            border: none;
     
                             &:hover{
                                 background-color: black;
     
                                 color: white;
-    
-                                border: none;
                             }
                         }
                     }
@@ -1258,14 +1279,18 @@ main{
                         align-items: center;
     
                         a{
-                            text-decoration: none;
+                            text-decoration: underline 1px transparent;
     
                             color: black;
     
                             margin: 25px;
+
+                            transition: color 0.1s ease-in-out, text-decoration 0.1s ease-in-out;
     
                             &:hover{
                                 color:#5a5a5a;
+
+                                text-decoration: underline 1px #5a5a5a;
                             }
                         }
                     }
@@ -1485,6 +1510,10 @@ main{
                     margin-bottom: 45px;
     
                     position:relative;
+
+                    outline: 5px solid transparent;
+
+                    transition: background-color 0.15s ease-in-out, outline 0.15s ease-in-out;
     
                     &:hover{
                         background-color: rgba(0, 0, 0, 0.04);
@@ -1745,12 +1774,14 @@ footer{
                     a{
                         display: block;
     
-                        text-decoration: none;
+                        text-decoration: underline 1px solid transparent;
     
                         margin: 15px 0;
+
+                        transition: text-decoration 0.15s ease-in-out;
     
                         &:hover{
-                            text-decoration: underline;
+                            text-decoration: underline 1px solid rgb(189,189,189);
                         }
                     }
                 }
@@ -1784,6 +1815,8 @@ footer{
                     color: white;
                     i{
                         font-size: 16px;
+
+                        transition: color 0.1s ease-in-out;
     
                         &:hover{
                             color: #ffffff7a;
